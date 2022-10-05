@@ -79,10 +79,14 @@ a:hover {
   } 
 }
 .hamburger{
+  width: 50px;
+  height: 50px;
   display:flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 3px;
-  margin: 20px;
+  margin: 5px;
 }
 
 .hamburger div{
@@ -94,6 +98,8 @@ a:hover {
 
 .desktop-menu {
   width:100%;
+  text-align: center;
+  font-size: 1.5vw;
   position: fixed;
   display: flex;
   background-color: var(--body-color);
@@ -104,14 +110,41 @@ a:hover {
 
 @media (max-width:480px) {
   .desktop-menu {
+    width: 50%;
+    height: 98vh;
+    font-size: 3vw;
+    margin-top: 50px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+    border-top: 1px solid var(--secondary-color);
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+  }
+
+  .disguise {
     display: none;
+  }
+
+  .show {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: start;
+  }
+
+  .show .hamburger {
+    grid-column: 2/3;
+    margin: 0;
+    align-items: flex-start;
+    padding-left: 6px;
   }
 }
 
-.desktop-menu a {
-  text-align: center;
-  font-size: 1.5vw;
-}
+
 
 
 .desktop-menu a:hover {
