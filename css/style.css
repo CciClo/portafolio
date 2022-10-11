@@ -14,20 +14,87 @@ html {
 body {
   background-color: var(--body-color);
   font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
 }
 
+@media (max-width: 488px){
+  .body {
+    font-size: 16px;
+  }
+}
 
 
 h1 {
   color: var(--primary-color);
   font-size: 100px;
+  font-weight: 600;
   text-align: center;
 }
 
 @media (max-width:480px) {
   h1 {
-    font-size: 50px;
-    font-weight: 600;
+    font-size: 40px;
+  }
+}
+
+.circle-content {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  display: flex;
+}
+
+.outer-circle {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+  align-items: center;
+}
+
+.middle-circle {
+  width: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+}
+
+.inner-circle {
+  width: 110px;
+  height: 110px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+}
+
+.right-circle {
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.right-circle .outer-circle {
+  position: relative;
+  right: -2%;
+}
+
+.left-circle .outer-circle {
+  position: relative;
+  left: -2%;
+}
+
+@media (max-width: 480px) {
+  .right-circle .outer-circle {
+    right: -14%;
+  }
+  .left-circle .outer-circle {
+    left: -14%;
   }
 }
 
@@ -180,14 +247,12 @@ main {
 }
 
 @media (max-width: 480px) {
-  .content-right {
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-  }
 
-  .content-right h2 {
-   padding-left: 40px;
+  .content-right {
+    width: calc(100% - 40px);
+    display: flex;
+    align-items: flex-start;
+    margin-left: 40px;
   }
 }
 
@@ -251,7 +316,6 @@ h2 {
 .content-center .main-icons p {
   color: var(--secondary-color);
   text-align: center;
-  font-size: 18px;
 }
 
 .main-experience {
@@ -324,7 +388,6 @@ h2 {
 
 .footer-icons {
   width: 100%;
-  height: 150px;
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -336,6 +399,12 @@ h2 {
   flex-flow: column;
   align-items: center;
   margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+  .footer-icons {
+    gap: 10vw;
+  }
 }
 
 .footer-icons img {
@@ -350,12 +419,8 @@ h2 {
 .footer-icons h3 {
   color: var(--primary-color);
   font-size: 18px;
-  margin: 10px auto;
-  text-align: center;
 }
 
 .footer-icons p {
   color: var(--secondary-color);
-  text-align: center;
-  font-size: 10px;
 }
