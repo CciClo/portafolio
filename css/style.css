@@ -44,6 +44,7 @@ h1 {
   position: absolute;
   z-index: -1;
   display: flex;
+  overflow: hidden;
 }
 
 .outer-circle {
@@ -75,8 +76,9 @@ h1 {
 }
 
 .right-circle {
+  height: 100%;
   justify-content: flex-end;
-  overflow: hidden;
+  align-items: center;
 }
 
 .right-circle .outer-circle {
@@ -90,6 +92,10 @@ h1 {
 }
 
 @media (max-width: 480px) {
+  .right-circle {
+    align-items: start;
+  }
+
   .right-circle .outer-circle {
     right: -14%;
   }
