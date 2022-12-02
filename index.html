@@ -11,11 +11,15 @@
 
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   </head>
   <body>
     <!-- portafolio 7 -->
     <header>
       <nav>
+        <div class="change-mode-container" >
+          <i class="fa-solid fa-moon"></i>
+        </div>
         <div class="mobile-menu">
           <div class="hamburger">
             <div></div>
@@ -33,30 +37,43 @@
         </div>
       </nav>
       <div class="header-content" id="home">
-        <img src="./images/profile.png" alt="profile">
+        <div class="profile-picture-container">
+          <img src="./images/profileOscar.jpeg" class="profile-picture" alt="profile">
+        </div>
         <h2>Hola, soy Oscar</h2>
         <h1>Diseñador y desarrollador web</h1>
         <div class="header-icons">
           <a href="#">
-            <img width=40 src="./icons/linkedin.svg" alt="linkedin">
+            <i class="fa-brands fa-linkedin"></i>
           </a>
           <a href="#">
-            <img src="./icons/instagram.svg" alt="instagram.svg">
+            <i class="fa-brands fa-square-instagram"></i>
           </a>
           <a href="#">
-            <img src="./icons/twitter.svg" alt="twitter.svg">
+            <i class="fa-brands fa-square-twitter"></i>
           </a>
         </div>
       </div>
     </header>
+
+
     <main>
       <section class="content-center" id="about-me">
         <h2>Acerca de mí</h2>
-        <p class="acerca-de-mi">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui corporis earum, sunt architecto nam nulla, maiores magni exercitationem modi possimus natus officiis rem! Tempore, nam repellendus itaque vero perferendis eaque.
-          Architecto ab quos a dolorem aut sed sequi mollitia assumenda numquam laboriosam. Maxime quisquam aliquid nemo temporibus natus quod odio modi beatae eligendi nostrum ut, accusamus, deserunt, libero architecto saepe?
-          Exercitationem ratione amet repellat reprehenderit voluptas quasi nihil et, ipsum doloremque quaerat id, tempore fugiat praesentium cum cupiditate modi officia corrupti maxime. Eaque, eum facere nisi iste aspernatur odio animi.
-        </p>
+        <div class="acerca-de-mi" >
+          <p>
+            Desarrollador Full Stack en formación con conocimientos en HTML, Css y JavaScript. 
+            Soy una persona a la que le gusta reinventarse constantemente en busca de alcanzar un mejor desempeño 
+          </p>
+          <p>
+            Mi perfil está orientado al logro, la proactividad, la resolución de problemas y un espíritu de aprendizaje constante. 
+            He encontrado una gran pasión por el desarrollo web y la implementación de aplicaciones que busquen suplir las necesidades básicas sociales. 
+          </p>
+          <p>
+            Busco oportunidades que me permitan aprender cada día a través de retos, trabajar en equipo e implementar mis conocimientos para el bien común. 
+          </p>
+
+        </div>
       </section>
       <section class="content-center" id="my-abilities">
         <h2>Mis habilidades</h2>
@@ -131,14 +148,14 @@
       <div class="footer-icons">
         <div>
           <a href="http://wa.me/+573215543915" target="_blank">
-            <img src="./icons/phone.svg" alt="phone.svg">
+            <i class="fa-solid fa-phone"></i>
           </a>
           <h3>Número celular</h3>
           <p>+57 3215543915</p>
         </div>
         <div>
           <a href="mailto:tato.tandioy@gmail.com">
-            <img src="./icons/mail 1.svg" alt="mail 1.svg">
+            <i class="fa-solid fa-envelope"></i>
           </a>
           <h3>Email</h3>
           <p>tato.tandioy@gmail.com</p>

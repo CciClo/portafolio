@@ -1,7 +1,15 @@
 :root {
   --body-color: #020403;
-  --primary-color: #ffffff;
+  --primary-color: rgb(255, 255, 255);
   --secondary-color: #adadad;
+  --color-menu: black;
+  --browser-letter-color-secondary: #adadad;
+  --browser-letter-color-primary: white;
+
+  --position-profile-picture: inline-block;
+  --width-profile-picture: 28%;
+  --border-raduis-profile-picture: 50%;
+  --pading-profile-picture: 0;
 }
 
 html {
@@ -132,9 +140,21 @@ a:hover {
   margin: 50px;
 }
 
-.header-content img {
-  width: 22%;
+.profile-picture {
+  width: 100%;
 }
+
+.profile-picture-container{
+  position: var(--position-profile-picture);
+  width: var(--width-profile-picture);
+  border-radius: var(--border-raduis-profile-picture);
+  overflow: hidden;
+  transition: all 1s;
+  cursor: pointer;
+  background-color: var(--body-color);
+  padding: var(--pading-profile-picture);
+}
+
 
 .mobile-menu {
   display: none;
@@ -144,7 +164,7 @@ a:hover {
   .mobile-menu {
     width: 100%;
     height: 50px;
-    background-color: var(--body-color);
+    background-color: var(--color-menu);
     display:flex;
     position: fixed;
     justify-content: flex-end;
@@ -171,13 +191,24 @@ a:hover {
 .desktop-menu {
   width:100%;
   text-align: center;
+  background-color: var(--color-menu);
   font-size: 1.5vw;
   position: fixed;
   display: flex;
-  background-color: var(--body-color);
   justify-content: flex-end;
   gap: 4vw;
   padding: 20px 8vw 20px 40px;
+}
+
+.desktop-menu a {
+  text-decoration: none;
+  color: var(--browser-letter-color-secondary);
+  transition: transform 0.5s;
+}
+
+.desktop-menu a:hover {
+  color: var(--browser-letter-color-primary);
+  transform: scale(1.2);
 }
 
 @media (max-width:480px) {
@@ -189,7 +220,7 @@ a:hover {
     flex-direction: column;
     justify-content: flex-start;
     align-items:flex-start;
-    border-top: 1px solid var(--secondary-color);
+    border-top: 1px solid var(--browser-letter-color-secondary);
   }
 
   header nav {
@@ -217,7 +248,7 @@ a:hover {
 }
 
 .desktop-menu a:hover {
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--browser-letter-color-primary);
 }
 
 .header-icons {
@@ -227,16 +258,13 @@ a:hover {
   justify-content: space-around;
 }
 
-.header-icons img {
-  width: 40px;
-  height: 40px;
+.header-icons .fa-brands {
+  font-size: 40px;
+  transition-duration:1s;
 }
 
-.header-icons img:hover{
-  background: rgb(0, 4, 255);
-  transition-duration:1s;
-  border-radius: 15px;
-  /* cursor:pointer; */
+.header-icons .fa-brands:hover{
+  color: rgb(0, 4, 255);
 }
 
 /* main section*/
@@ -413,12 +441,13 @@ h2 {
   }
 }
 
-.footer-icons img {
+.footer-icons .fa-solid {
   width: 70px;
+  font-size: 40px;
   height: 70px;
   padding: 15px;
   border: 1px solid var(--primary-color);
-  border-radius: 35px;
+  border-radius: 50%;
   /* cursor:pointer; */
 }
 
@@ -429,4 +458,24 @@ h2 {
 
 .footer-icons p {
   color: var(--secondary-color);
+}
+
+/* ********** Change Mode container ****************** */
+
+.change-mode-container {
+  left: 0;
+  padding: 20px;
+  position: fixed;
+  z-index: 100000;
+  cursor: pointer;
+}
+
+.change-mode-container:hover .fa-solid{
+  transform: scale(1.3);
+}
+
+.change-mode-container .fa-solid{
+ transition: all 0.5s;
+ color: white;
+ font-size: 20px;
 }
