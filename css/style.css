@@ -145,14 +145,16 @@ a:hover {
 }
 
 .profile-picture-container{
-  position: var(--position-profile-picture);
   width: var(--width-profile-picture);
+  height: 100%;
+  position: var(--position-profile-picture);
   border-radius: var(--border-raduis-profile-picture);
   overflow: hidden;
   transition: all 1s;
   cursor: pointer;
   background-color: var(--body-color);
   padding: var(--pading-profile-picture);
+  top: 0;
 }
 
 
