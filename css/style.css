@@ -480,7 +480,8 @@ h2 {
 }
 
 .change-mode-container .fa-solid{
- transition: all 0.5s;
- color: white;
- font-size: 20px;
+  transition: all 0.5s;
+  color: white;
+  font-size: 20px;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.479));
 }
