@@ -155,6 +155,9 @@ a:hover {
   background-color: var(--body-color);
   padding: var(--pading-profile-picture);
   top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
